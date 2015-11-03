@@ -20,9 +20,8 @@
 </head>
 <body>
 	<header class="Header">
-	
 		<div class="Header-logo">
-			<p>My Blog</p><span>by Calos Arturo</span>
+			<p>My Blog</p><span>by Carlos Arturo</span>
 		</div>
 		<nav>
 			<?php wp_nav_menu(
