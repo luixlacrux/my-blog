@@ -1,33 +1,25 @@
 			<section id="slideshow">
-				<div class="slide">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					
-					<img class="thumb" src="http://www.lorempixel.com/300/200">
-					
-					<article>
-						<hgroup><h2><a href="#">Titulo de nuestro articulo</a></h2></hgroup>
-						<p class="date">16 de Diciembre de 2014 <a href="#">Categoria 1</a></p>
-						<p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, animi pariatur voluptas quibusdam saepe quo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, !</p>
-					</article>
-				</div>
-				<div class="slide">
-					
-					<img class="thumb" src="http://www.lorempixel.com/300/200">
-					
-					<article>
-						<hgroup><h2><a href="#">Titulo de nuestro articulo</a></h2></hgroup>
-						<p class="date">16 de Diciembre de 2014 <a href="#">Categoria 1</a></p>
-						<p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, animi pariatur voluptas quibusdam saepe quo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, !</p>
-					</article>
-				</div>
-				<div class="slide">
-					
-					<img class="thumb" src="http://www.lorempixel.com/300/200">
-					
-					<article>
-						<hgroup><h2><a href="#">Titulo de nuestro articulo</a></h2></hgroup>
-						<p class="date">16 de Diciembre de 2014 <a href="#">Categoria 1</a></p>
-						<p class="extract">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, animi pariatur voluptas quibusdam saepe quo!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque a necessitatibus officiis esse quam distinctio ex ipsam, modi soluta quidem voluptatibus debitis laudantium officia, !</p>
-					</article>
-				</div>
+					<div class="slide">
+						<div class="thumb">
+							<a href="<?php the_permalink(); ?>">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'slider_thumbs' ); } ?>
+							</a>
+						</div>
+						
+						<article>
+							<hgroup><h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2></hgroup>
+							<div class="date"><?php the_date();?> en <span><?php the_category();?></span> </div>
+							<div class="extract"><?php the_excerpt();?> </div>
+						</article>
+					</div>
 
+				<?php endwhile; else: ?>
+
+					<h1>No se encontraron posts </h1>
+				
+				<?php endif;?>
+				
+				
 			</section>

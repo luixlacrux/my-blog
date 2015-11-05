@@ -1,0 +1,30 @@
+commit 7bb571edb7da6bf5d5f5d00acb372d12f58cad01
+Author: luixlacrux <luixlacrux18@gmail.com>
+Date:   Tue Nov 3 13:49:52 2015 -0430
+
+    Terminando de agregar Thumbnils
+
+commit 088403050b987298ddf2d6396947420cb70819bf
+Author: luixlacrux <luixlacrux18@gmail.com>
+Date:   Tue Nov 3 12:20:07 2015 -0430
+
+    Agregando funciones para las thumbils
+
+commit df07f07aea24b9b64d44a71da44e922ebdeff779
+Merge: bb74497 fb3f453
+Author: luixlacrux <luixlacrux18@gmail.com>
+Date:   Tue Nov 3 01:05:40 2015 -0430
+
+    Merge remote-tracking branch 'origin/master'
+
+commit bb744978779a333ce7f53e80d1d00aa777588603
+Author: luixlacrux <luixlacrux18@gmail.com>
+Date:   Tue Nov 3 00:57:46 2015 -0430
+
+    Iniciando Repositorio
+
+commit fb3f453b54d4235810424f083bfa548bbd13372e
+Author: luixlacrux <luixlacrux18@gmail.com>
+Date:   Tue Nov 3 00:49:35 2015 -0430
+
+    Initial commit
