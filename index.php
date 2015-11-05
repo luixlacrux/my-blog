@@ -14,7 +14,7 @@
 				</a></div>
 				
 				<hgroup><h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2></hgroup>
-				<div class="date"><?php the_date();?> en <span><?php the_category();?></span> </div>
+				<div class="date"><?php echo get_the_date();?> en <span><?php the_category();?></span> </div>
 				<div class="extract"><?php the_excerpt();?> </div>
 			</article>
 			
