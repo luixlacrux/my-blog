@@ -13,10 +13,26 @@
 	$(function(){
 		$("#slideshow").slidesjs({
 			height: 250,
-			navigation:false
+			start: 1,
+			navigation:false,
+			effect: {
+			      slide: {
+			        // Slide effect settings.
+			        speed: 2000
+			          // [number] Speed in milliseconds of the slide animation.
+			      },
+			      fade: {
+			        speed: 2000,
+			          // [number] Speed in milliseconds of the fade animation.
+			        crossfade: false
+			          // [boolean] Cross-fade the transition.
+			      }
+			    }
+			
 		});
 	});
 	</script>
+	<?php wp_head();?>
 </head>
 <body>
 	<header class="Header">
