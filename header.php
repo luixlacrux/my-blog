@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="UTF-8"/>
-	<title>My Blog</title/>
+	<title><?php bloginfo("title");?></title/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>"/>
 	<link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/normalize.css"/>
@@ -36,9 +36,9 @@
 </head>
 <body>
 	<header class="Header">
-		<div class="Header-logo">
-			<p>My Blog</p><span>by Carlos Arturo</span>
-		</div>
+		<a class="Header-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<p><?php bloginfo( 'name' ); ?></p><span><?php bloginfo( 'description' ); ?></span>
+		</a>
 		<nav>
 			<?php wp_nav_menu(
 				array(
@@ -46,5 +46,6 @@
 				'items_wrap' => '<ul id="menu-top">%3$s</ul>',
 				'themes_location' => 'menu'	
 				)); ?>
+			
 		</nav>
 	</header>
